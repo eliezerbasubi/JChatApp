@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/app_bar_search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:orderInCategory="100"
+        android:title="Search"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/account_settings"
+        android:title="Account Settings"
+        android:icon="@drawable/ic_settings_black_24dp"
+        app:showAsAction="never"
+        android:orderInCategory="101"
+        />
+    <item
+        android:id="@+id/all_users"
+        android:title="All Users"
+        android:icon="@drawable/ic_group_black_24dp"
+        android:orderInCategory="101"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/privacy"
+        android:title="Privacy"
+        android:icon="@drawable/ic_fingerprint_black_24dp"
+        app:showAsAction="never"
+        android:orderInCategory="101"
+        />
+    <item
+        android:id="@+id/main_logout"
+        android:title="@string/log_out"
+        android:icon="@drawable/check_out"
+        app:showAsAction="never"
+        android:orderInCategory="101"
+        />
+</menu>

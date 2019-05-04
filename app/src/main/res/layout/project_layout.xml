@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.eliezer.jchatapp.MainActivity">
+    <include layout="@layout/app_bar_layout" android:id="@+id/app_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/app_layout">
+
+        <RelativeLayout
+            android:id="@+id/relative_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorMaroon"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            >
+            <TextView
+                android:id="@+id/article_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ARTICLE ONE"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="18dp"
+                android:layout_margin="5dp"
+                />
+
+            <ImageView
+                android:id="@+id/image_one"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:src="@drawable/default_avatar"
+                android:layout_below="@id/article_one"
+                android:layout_centerHorizontal="true"/>
+
+            <EditText
+                android:id="@+id/product_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:hint="product name"
+                android:layout_below="@id/image_one"/>
+
+            <EditText
+                android:id="@+id/price_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/product_one"
+                android:layout_margin="0dp"
+                android:hint="product price "/>
+
+            <Button
+                android:id="@+id/add_article_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/price_one"
+                android:layout_centerHorizontal="true"
+                android:textSize="18dp"
+                android:text="Add article"
+                android:padding="15dp"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/price_one"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/ic_expand_more_black_24dp"
+                android:layout_alignParentRight="true"/>
+
+            //ARTICLE TWO
+
+            <RelativeLayout
+                android:id="@+id/relative_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/add_article_one"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/article_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ARTICLE TWO"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18dp"
+                    android:layout_margin="5dp"
+                    />
+                <ImageView
+                    android:id="@+id/image_two"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:src="@drawable/default_avatar"
+                    android:layout_below="@id/article_two"
+                    android:layout_centerHorizontal="true"/>
+
+                <EditText
+                    android:id="@+id/product_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:hint="product name"
+                    android:layout_below="@id/image_two"/>
+
+                <EditText
+                    android:id="@+id/price_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product_two"
+                    android:layout_margin="0dp"
+                    android:hint="product price "/>
+
+                <Button
+                    android:id="@+id/add_article_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/price_two"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="18dp"
+                    android:text="Add article"
+                    android:padding="15dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relative_two"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/article_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ARTICLE TWO"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18dp"
+                    android:layout_margin="5dp"
+                    />
+                <ImageView
+                    android:id="@+id/image_three"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:src="@drawable/default_avatar"
+                    android:layout_below="@id/article_three"
+                    android:layout_centerHorizontal="true"/>
+
+                <EditText
+                    android:id="@+id/product_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:hint="product name"
+                    android:layout_below="@id/image_three"/>
+
+                <EditText
+                    android:id="@+id/price_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product_three"
+                    android:layout_margin="0dp"
+                    android:hint="product price "/>
+
+                <Button
+                    android:id="@+id/add_article_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/price_three"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="18dp"
+                    android:text="Add article"
+                    android:padding="15dp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

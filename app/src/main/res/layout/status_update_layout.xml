@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/tab_messages_layout">
+
+        <ImageView
+            android:id="@+id/username"
+            android:inputType="textEmailAddress"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/ic_message_black_24dp"
+            />
+
+        <TextView
+            android:id="@+id/show_new_messages_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/username"
+            android:text="4"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorWhite"
+            android:gravity="fill"
+            android:background="@drawable/messages_seen_show_layout"
+            android:visibility="gone"/>
+</RelativeLayout>

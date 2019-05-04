@@ -1,0 +1,260 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp">
+
+
+    <LinearLayout
+        android:id="@+id/layout_receiver"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:padding="3dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/message_profile_layout"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/default_avatar"/>
+        </LinearLayout>
+
+        <me.himanshusoni.chatmessageview.ChatMessageView
+            android:id="@+id/contentMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cmv_backgroundColor="@color/colorPrimaryDark"
+            app:cmv_backgroundColorPressed="#FFBABABA"
+            app:cmv_arrowGravity="start"
+            app:cmv_arrowPosition="left"
+            app:cmv_cornerRadius="5dp"
+            app:cmv_showArrow="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/ivUserChat"
+            android:layout_toRightOf="@+id/message_profile_layout">
+
+            <hani.momanii.supernova_emoji_library.Helper.EmojiconTextView
+                android:id="@+id/message_text_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:text="message"
+                android:layout_weight="1"
+                android:textIsSelectable="true"
+                android:layout_toEndOf="@id/message_profile_layout"
+                android:layout_toStartOf="@id/contentMessageChat"
+                android:layout_toRightOf="@id/message_profile_layout"
+                android:layout_toLeftOf="@id/contentMessageChat"
+                android:maxWidth="250dp"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignTop="@id/message_text_layout"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/time_text_layout"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="00:00 p.m."
+                    android:textSize="13dp"
+                    android:layout_weight="0"/>
+            </LinearLayout>
+        </me.himanshusoni.chatmessageview.ChatMessageView>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_sender"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:padding="3dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        >
+
+        <me.himanshusoni.chatmessageview.ChatMessageView
+
+            android:id="@+id/contentMessageChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/linearSenderImage"
+            android:layout_toStartOf="@id/contentMessage"
+            android:layout_toRightOf="@id/layout_receiver"
+            app:cmv_arrowGravity="start"
+            app:cmv_arrowMargin="3dp"
+            app:cmv_arrowPosition="right"
+            app:cmv_backgroundColor="@color/colorWhite"
+            app:cmv_backgroundColorPressed="#FFBABABA"
+            app:cmv_contentPadding="10dp"
+            app:cmv_cornerRadius="5dp"
+            app:cmv_showArrow="true"
+            android:layout_toLeftOf="@+id/receiver_display_image_layout"
+            >
+
+            <hani.momanii.supernova_emoji_library.Helper.EmojiconTextView
+                android:id="@+id/sender_messages_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:text="Message right here"
+                android:layout_weight="1"
+                android:layout_toEndOf="@id/linearSenderImage"
+                android:layout_toStartOf="@id/contentMessage"
+                android:layout_toLeftOf="@id/contentMessage"
+                android:layout_toRightOf="@id/layout_receiver"
+                android:layout_centerHorizontal="true"
+                android:maxWidth="250dp"/>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/message_text_layout"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:layout_toRightOf="@id/sender_messages_display"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/rec_time_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:layout_gravity="center"
+                    android:textSize="13dp"
+                    android:layout_weight="0"
+                    android:layout_marginRight="2dp"
+                    />
+            </LinearLayout>
+
+
+
+        </me.himanshusoni.chatmessageview.ChatMessageView>
+
+        <LinearLayout
+            android:id="@+id/linearSenderImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/receiver_display_image_layout"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/default_avatar"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    //Images
+    <LinearLayout
+        android:id="@+id/imageReceiverLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:gravity="left"
+        android:visibility="gone">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/receiverImageProfile"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/default_avatar"/>
+
+        <me.himanshusoni.chatmessageview.ChatMessageView
+            android:id="@+id/contentImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cmv_backgroundColor="@color/colorPrimaryDark"
+            app:cmv_backgroundColorPressed="#FFBABABA"
+            app:cmv_arrowGravity="start"
+            app:cmv_arrowPosition="left"
+            app:cmv_cornerRadius="5dp"
+            app:cmv_showArrow="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/ivUserChat"
+            android:layout_toRightOf="@+id/message_profile_layout">
+
+            <ImageView
+                android:id="@+id/img_chat_receiver"
+                android:minWidth="100dp"
+                android:minHeight="100dp"
+                android:maxWidth="150dp"
+                android:maxHeight="150dp"
+                android:background="#000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </me.himanshusoni.chatmessageview.ChatMessageView>
+    </LinearLayout>
+
+
+
+
+
+
+    //Send view images
+    <LinearLayout
+        android:id="@+id/imageSenderLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_gravity="right"
+        android:visibility="gone">
+
+        <me.himanshusoni.chatmessageview.ChatMessageView
+            android:id="@+id/contentImage_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cmv_backgroundColor="@color/colorWhite"
+            app:cmv_backgroundColorPressed="#FFBABABA"
+            app:cmv_arrowGravity="start"
+            app:cmv_arrowPosition="right"
+            app:cmv_cornerRadius="5dp"
+            app:cmv_showArrow="true"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/img_chat_sender"
+            android:layout_toRightOf="@+id/contentImage">
+
+        <ImageView
+            android:id="@+id/img_chat_sender"
+            android:minWidth="100dp"
+            android:minHeight="100dp"
+            android:maxWidth="150dp"
+            android:maxHeight="150dp"
+            android:background="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        </me.himanshusoni.chatmessageview.ChatMessageView>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/senderImageProfile"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/default_avatar"/>
+    </LinearLayout>
+
+</LinearLayout>

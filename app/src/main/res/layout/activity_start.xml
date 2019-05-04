@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@color/colorPrimaryDark"
+    tools:context="com.example.eliezer.jchatapp.StartActivity">
+
+    <ViewFlipper
+        android:id="@+id/viewflipper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoStart="true"
+        android:flipInterval="5000"
+        >
+
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:src="@drawable/laugh"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"/>
+
+
+        <ImageView
+            android:id="@+id/imageview2"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:src="@drawable/foreground_laugh"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/imageview3"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:src="@drawable/couple"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/imageview4"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:src="@drawable/girl_show_man_phone"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/imageview5"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:src="@drawable/people_show_jchat"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"/>
+    </ViewFlipper>
+
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewflipper"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="Welcome To JChat"
+        android:textColor="@color/colorWhite"
+        android:textSize="30dp" />
+
+    <LinearLayout
+        android:layout_below="@id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout3">
+
+        <Button
+            android:id="@+id/signBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SIGN IN "
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorWhite"
+            android:layout_marginLeft="80dp"
+            android:textSize="20dp"
+            android:paddingEnd="10dp"
+            android:paddingStart="10dp"/>
+
+        <Button
+            android:id="@+id/register_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REGISTER"
+            android:background="@color/colorMaroon"
+            android:layout_marginLeft="20dp"
+            android:textSize="17dp"
+            android:textColor="@color/colorWhite"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/connect_with"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        android:text="Connect with "
+        android:textColor="@color/colorWhite"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/social_media"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/connect_with"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/facebook"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:src="@drawable/facebook"
+            android:layout_marginLeft="60dp"/>
+
+        <ImageView
+            android:id="@+id/google"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:src="@drawable/google_icon"
+            android:layout_marginLeft="10dp"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_alignTop="@+id/social_media"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/twitter" />
+</RelativeLayout>

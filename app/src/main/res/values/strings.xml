@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">JChatApp</string>
+    <string name="log_out">Log Out</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_email">eliezerbasubi30@gmail.com</string>
+    <string name="default_status">Hey, come chill with me on JChat !!!</string>
+    <string name="default_full_name">Basubi Wikulukya Eliezer</string>
+    <string name="hint_status">new status</string>
+    <string name="hint_save_changes">SAVE CHANGES</string>
+    <string name="add_new_status">add new status</string>
+    <string name="save_changes">SAVE CHANGES</string>
+</resources>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    tools:context="com.example.eliezer.jchatapp.ProfileActivity">
+
+    <ImageView
+        android:id="@+id/user_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="330dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/default_avatar" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout2"
+        android:layout_above="@id/linear_status"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/user_display_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/user_profile"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@+id/user_display_status"
+            android:layout_toStartOf="@+id/user_display_status"
+            android:padding="10dp"
+            android:text="Username"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/linear_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:layout_marginBottom="35dp"
+        android:padding="10dp"
+        android:layout_above="@id/all_friends_display">
+
+
+        <TextView
+            android:id="@+id/user_display_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/send_request"
+            android:layout_alignRight="@+id/send_request"
+            android:gravity="center_horizontal"
+            android:text="User current status"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/all_friends_display"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/mutual_friends_display"
+        android:layout_alignLeft="@+id/mutual_friends_display"
+        android:layout_alignStart="@+id/mutual_friends_display"
+        android:layout_marginBottom="16dp"
+        android:text="Friends"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:src="@drawable/single_friends"/>
+
+    <TextView
+        android:id="@+id/number_of_friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/number_of_mutual_friends"
+        android:layout_alignBottom="@+id/number_of_mutual_friends"
+        android:layout_alignEnd="@+id/linearLayout2"
+        android:layout_alignRight="@+id/linearLayout2"
+        android:layout_marginLeft="20dp"
+        android:text="500"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/number_of_mutual_friends"
+        android:layout_alignStart="@+id/number_of_mutual_friends"
+        android:layout_below="@+id/linear_status"
+        android:src="@drawable/mutual_friends" />
+
+    <TextView
+        android:id="@+id/mutual_friends_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/send_request"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="13dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="10dp"
+        android:text="Friends"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/number_of_mutual_friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/circleImageView"
+        android:layout_toEndOf="@+id/decline_request"
+        android:layout_toRightOf="@+id/decline_request"
+        android:text="350"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/number_of_mutual_friends"
+        android:layout_marginEnd="44dp"
+        android:layout_marginRight="44dp"
+        android:text="Mutual Friends"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/send_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/decline_request"
+        android:layout_alignLeft="@+id/mutual_friends_display"
+        android:layout_alignStart="@+id/mutual_friends_display"
+        android:layout_marginBottom="20dp"
+        android:background="@color/colorMaroon"
+        android:paddingEnd="30dp"
+        android:paddingStart="30dp"
+        android:text="SEND REQUEST"
+        android:textColor="@color/colorWhite" />
+
+    <Button
+        android:id="@+id/decline_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mutual_friends_display"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/mutual_friends_display"
+        android:layout_marginBottom="37dp"
+        android:background="@color/colorMaroon"
+        android:paddingEnd="30dp"
+        android:paddingStart="30dp"
+        android:text="DECLINE REQUEST"
+        android:textColor="@color/colorWhite" />
+</RelativeLayout>
